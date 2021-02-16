@@ -5,9 +5,7 @@ import {
 import {TabsState, generateInitialTabState} from './types';
 
 const initialState: TabsState = {
-    tabs: generateInitialTabState(),
-    error: false,
-    loading: false
+    tabs: generateInitialTabState()
 };
 
 

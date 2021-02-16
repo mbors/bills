@@ -1,7 +1,7 @@
 import {createAction, PayloadAction} from '@reduxjs/toolkit';
 import {Tab} from './types';
 
-export const enum TAB_ACTION {
+export enum TAB_ACTION {
     SET_SELECTION = 'SET_SELECTION',
 }
 
