@@ -4,7 +4,7 @@
       "categoryId": 1,
       "iconUrl": "https://pbs.twimg.com/profile_images/1151788824093188097/wHfb5mYZ_bigger.png",
       "id": "5a5caa1efe33900100fd8ed5",
-      "isBill": false,
+      "isBill": true,
       "name": "Vodafone",
       "transactions": [
         {
@@ -106,7 +106,7 @@
       "categoryId": 2,
       "iconUrl": "https://pbs.twimg.com/profile_images/1235992718171467776/PaX2Bz1S_bigger.jpg",
       "id": "5a5cab18fe33900100fd8ed8",
-      "isBill": true,
+      "isBill": false,
       "name": "Netflix",
       "transactions": [
         {
@@ -133,40 +133,6 @@
           "amount": 19,
           "date": "2018-05-02",
           "id": 10
-        }
-      ]
-    },
-    {
-      "categoryId": 3,
-      "iconUrl": null,
-      "id": "5a5cab3bfe33900100fd8ed9",
-      "isBill": true,
-      "name": "Transfer to flatmate",
-      "transactions": [
-        {
-          "amount": 450,
-          "date": "2018-01-02",
-          "id": 11
-        },
-        {
-          "amount": 450,
-          "date": "2018-02-02",
-          "id": 12
-        },
-        {
-          "amount": 450,
-          "date": "2018-03-02",
-          "id": 13
-        },
-        {
-          "amount": 450,
-          "date": "2018-04-02",
-          "id": 14
-        },
-        {
-          "amount": 450,
-          "date": "2018-05-02",
-          "id": 15
         }
       ]
     },
@@ -242,7 +208,7 @@
       "categoryId": 5,
       "iconUrl": "https://makemefallback/notgoingtowork.jpg",
       "id": "5a5cac65fe33900100fd8edc",
-      "isBill": false,
+      "isBill": true,
       "name": "Sainsbury's",
       "transactions": [
         {
@@ -276,7 +242,7 @@
       "categoryId": 4,
       "iconUrl": "https://pbs.twimg.com/profile_images/1145605208610889729/C7EH0Qyi_bigger.png",
       "id": "328card4fe33900100fd8ail",
-      "isBill": false,
+      "isBill": true,
       "name": "Uber",
       "transactions": [
         {

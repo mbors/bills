@@ -1,0 +1,32 @@
+.main-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+
+  .tabs-container {
+    display: flex;
+    padding: 10px 0 30px;
+    list-style: none;
+
+    .tab-item {
+      margin: 0 60px 0;
+      font-size: 20px;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      color: rgba(0, 0, 0, .4);
+      transition: all ease-in-out .2s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab-item.selected {
+      border-bottom: 2px solid #F7BF31;
+      color: black;
+
+    }
+
+  }
+
+}

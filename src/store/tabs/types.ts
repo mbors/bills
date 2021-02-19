@@ -1,5 +1,6 @@
 export interface Tab {
     name: TAB_NAME,
+    customName: string,
     isSelected: boolean
 }
 
@@ -15,10 +16,12 @@ export interface TabsState {
 export const generateInitialTabState = (): Tab[] => [
     {
         name: TAB_NAME.MERCHANTS_BILLS,
+        customName: 'Bills',
         isSelected: true,
     },
     {
         name: TAB_NAME.MERCHANTS_POTENTIAL_BILLS,
+        customName: 'Potential bills',
         isSelected: false,
     }
 ];

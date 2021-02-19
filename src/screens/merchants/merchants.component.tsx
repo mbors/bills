@@ -2,9 +2,11 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getMerchants} from 'store/merchants/merchants.action';
 import {merchantsSelectors} from 'store/merchants/merchants.selector';
-import {Tabs} from 'screens/merchants/components/tabs/tabs.component';
-import {generateInitialTabState, Tab, TAB_NAME} from 'store/tabs/types';
+import {TAB_NAME} from 'store/tabs/types';
 import {tabsSelectors} from 'store/tabs/tabs.selector';
+import {TabNavigation} from 'screens/merchants/components/tabNavigation/tabNavigation.component';
+import {MerchantsList} from 'shared/merchantsList/merchantsList.component';
+import './merchants.scss';
 
 export interface MerchantsProps {
 
@@ -12,33 +14,35 @@ export interface MerchantsProps {
 
 export const Merchants = (props: MerchantsProps) => {
     const dispatch = useDispatch();
-    const billMerchants = useSelector(merchantsSelectors.getMerchantsBills);
-    const merchants = useSelector(merchantsSelectors.getMerchantsPotentialBills);
+    const bills = useSelector(merchantsSelectors.getBills);
+    const potentialBills = useSelector(merchantsSelectors.getPotentialBills);
     const selectedTab = useSelector(tabsSelectors.getSelectedTab);
     const tabs = useSelector(tabsSelectors.getTabs);
+    const loading = useSelector(merchantsSelectors.getLoading);
+
 
     useEffect(() => {
         dispatch(getMerchants())
-
     }, [dispatch]);
 
     const getTabContent = (selectedTabName?: TAB_NAME) => {
         switch (selectedTabName) {
             case TAB_NAME.MERCHANTS_BILLS:
-                return <div>{'Merchant bills'}</div>;
+                return <MerchantsList merchants={bills} loading={loading} emptyStateMsg={'You have no bills'}/>;
             case TAB_NAME.MERCHANTS_POTENTIAL_BILLS:
-                return <div>{'Merchant potential bills'}</div>
+                return <MerchantsList loading={loading} merchants={potentialBills}
+                                      emptyStateMsg={'You have no potential bills'}/>;
             default:
-                return <div></div>
+                return <span>{'Something went wrong'}</span>
         }
-    }
+    };
 
 
     return (
-        <div>
-            <Tabs tabs={tabs}>
+        <div className={'merchants-container'}>
+            <TabNavigation tabs={tabs}>
                 {getTabContent(selectedTab?.name)}
-            </Tabs>
+            </TabNavigation>
         </div>
     );
 };

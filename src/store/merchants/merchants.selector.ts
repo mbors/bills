@@ -1,8 +1,9 @@
 import {RootState} from '../reducer.config';
 import {Merchant} from 'models/merchant.types';
 
-const getMerchantsBills = (state: RootState): Merchant[] | undefined => state.merchants.merchants.filter(merchant => merchant.isBill);
+const getBills = (state: RootState): Merchant[] | undefined => state.merchants.merchants.filter(merchant => merchant.isBill);
+const getPotentialBills = (state: RootState): Merchant[] | undefined => state.merchants.merchants.filter(merchant => !merchant.isBill);
+const getLoading = (state: RootState): boolean => state.merchants.loading;
+const getError = (state: RootState): boolean => state.merchants.error;
 
-const getMerchantsPotentialBills = (state: RootState): Merchant[] | undefined => state.merchants.merchants.filter(merchant => !merchant.isBill);
-
-export const merchantsSelectors = {getMerchantsBills, getMerchantsPotentialBills};
+export const merchantsSelectors = {getBills, getPotentialBills, getLoading, getError};

@@ -1,4 +1,4 @@
-import {createAction, PayloadAction} from '@reduxjs/toolkit';
+import {createAction} from '@reduxjs/toolkit';
 import {Tab} from './types';
 
 export enum TAB_ACTION {
