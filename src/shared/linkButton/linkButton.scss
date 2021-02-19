@@ -1,12 +1,10 @@
 
 .link-button {
-  background: none!important;
+  background: transparent;
   border: none;
-  padding: 0!important;
-  /*optional*/
-  font-family: arial, sans-serif;
-  /*input has OS specific font-family*/
-  color: #069;
-  text-decoration: underline;
+  outline: none;
   cursor: pointer;
+  color: rgba(6, 19, 255, 0.75);
+  transition: all ease-in-out .2s;
+  border-bottom: 2px solid transparent;
 }
