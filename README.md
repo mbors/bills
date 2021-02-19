@@ -1,4 +1,4 @@
-## Cleo Frontend Interview - Bills
+## Cleo Frontend Interview
 ### Time
 I have spent 4 hours on this task. 
 
